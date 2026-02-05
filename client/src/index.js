@@ -5,6 +5,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Toaster } from 'react-hot-toast';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,3 +27,6 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// ✅ Register service worker for offline mode
+serviceWorkerRegistration.register();
