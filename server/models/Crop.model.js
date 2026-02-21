@@ -4,7 +4,7 @@ const cropSchema = new mongoose.Schema({
   farmer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true
+    required:true
   },
   cropName: {
     type: String,
